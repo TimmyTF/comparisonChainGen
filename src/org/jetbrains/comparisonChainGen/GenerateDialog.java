@@ -10,6 +10,7 @@ import com.intellij.ui.ToolbarDecorator;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import java.util.List;
 
 /**
  * Created by tflomin on 14.01.2015.
@@ -38,5 +39,9 @@ public class GenerateDialog extends DialogWrapper {
     @Override
     protected JComponent createCenterPanel() {
         return myComponent;
+    }
+
+    public List<PsiField> getFields() {
+        return myFields.getItems();
     }
 }
